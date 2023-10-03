@@ -16,3 +16,5 @@ c<-c(100, 500, 600, 1000)
 plot (c, s, xlab="n people", yab="microplastics", pch=19, cex=2, col="blue")
 
 #Package: sp, spatial data
+install.packages("sp")
+library (sp)
