@@ -3,11 +3,11 @@
 Spatial ecology in R 
 
 UNIBO 2023
->**Notes**
->
-> Scripts will be added lecture by lecture
 
 ## Main scripts in this repo
 + scripts on populations
 + scripts on communities
 + scripts on ecosystems
+
+>**Notes**
+>Scripts will be added lecture by lecture
