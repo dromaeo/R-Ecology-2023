@@ -3,7 +3,7 @@
 Spatial ecology in R 
 
 UNIBO 2023
-> **Notes**
+>**Notes**
 >
 > Scripts will be added lecture by lecture
 
