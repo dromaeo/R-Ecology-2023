@@ -12,9 +12,8 @@ plot(bei, pch=19, cex=.5)
 # we want to understand why there are forests there
 
 bei.extra
+# It contains 2 levels of maps: a raster each (aratro each pixel) is a map, elevation and grad
 plot(bei.extra)
-plot(bei.extra[[1]])
-
 plot(bei.extra[[1]])
 plot(bei, pch=19, cex=.5, add=T) 
 
