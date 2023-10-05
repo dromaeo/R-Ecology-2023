@@ -14,9 +14,12 @@ plot(bei, pch=19, cex=.5)
 bei.extra
 # It contains 2 levels of maps: a raster each (aratro each pixel) is a map, elevation and grad
 plot(bei.extra)
-plot(bei.extra[[1]])
-plot(bei, pch=19, cex=.5, add=T) 
+# To link elevation to dataset you use a symbol like rope: $
+plot(bei.extra$elev)
+elevation<-bei.extra$elev
 
+
+plot(bei.extra[[1]])
 density_map <- density(bei)
 
 par(mfrow=c(2,1))
