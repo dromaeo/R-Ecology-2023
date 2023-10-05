@@ -17,7 +17,7 @@ plot(bei.extra)
 # To link elevation to dataset you use a symbol like rope: $
 plot(bei.extra$elev)
 elevation<-bei.extra$elev
-
+ #6th or 7th person will have same birthday as another. cumulative population
 
 plot(bei.extra[[1]])
 density_map <- density(bei)
