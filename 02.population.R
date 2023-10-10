@@ -25,11 +25,11 @@ plot(bei.extra[[1]])
 
 density_map <- density(bei)
 # passing from points to a continuous surface
+density_map
+plot(density_map)
+points(bei, cex=2)
 
 par(mfrow=c(2,1))
-plot(bei.extra[[1]])
-plot(density_map)
-
 cl <- colorRampPalette(c("black", "red", "orange", "yellow"))(100)
 plot(bei.extra[[1]], col=cl)
 plot(density_map, col=cl)
