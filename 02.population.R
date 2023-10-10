@@ -28,11 +28,12 @@ density_map <- density(bei)
 density_map
 plot(density_map)
 points(bei, cex=2)
+cl <- colorRampPalette(c("black", "red", "orange", "yellow"))(100)
+plot(density_map, col=cl)
+
 
 par(mfrow=c(2,1))
-cl <- colorRampPalette(c("black", "red", "orange", "yellow"))(100)
 plot(bei.extra[[1]], col=cl)
-plot(density_map, col=cl)
 
 #-----
 bei.rast <- rast(bei.extra[[1]])
