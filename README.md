@@ -1,13 +1,13 @@
 # R-Ecology-2023 👾
-## Course repository 💻
+## Course
 Spatial ecology in R 
 
-UNIBO 2023
+University of Bologna - 2023/24
 
-## Main scripts in this repo
+## Contents
 + scripts on populations
 + scripts on communities
 + scripts on ecosystems
 
 >**Notes**
->Scripts will be added lecture by lecture
+> This repository contains scripts and notes taken during classes
