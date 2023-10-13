@@ -31,21 +31,17 @@ points(bei, cex=2)
 cl <- colorRampPalette(c("black", "red", "orange", "yellow"))(100)
 plot(density_map, col=cl)
 
+clnew <- colorRampPalette(c("dark blue", "blue", "light blue"))(4)
+plot(densitymap, col=clnew)
 
-par(mfrow=c(2,1))
 plot(bei.extra[[1]], col=cl)
 
-#-----
-bei.rast <- rast(bei.extra[[1]])
-density.rast <- rast(density_map)
+# multiframe
+par(mfrow=c(2,1))
+plot(densitymap)
+plot(elev)
 
-randompoints <- spatSample(bei.rast, 100, "random", as.points = TRUE)
-bei.points <- terra::extract(bei.rast, randompoints)
-density.points <- terra::extract(density.rast, randompoints)
- 
-pointmaps <- data.frame(bei.points[1:2], density.points[2])
-
-names(pointmaps)
-
-attach(pointmaps)
-plot(lyr.1, lyr.1.1)
+par(mfrow=c(1,3))
+plot(bei)
+plot(densitymap)
+plot(elev)
