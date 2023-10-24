@@ -60,6 +60,7 @@ library(overlap)
 # https://cran.r-project.org/web/packages/overlap/vignettes/overlap.pdf
 
 
+# relation among species in time
 # data
 data(kerinci)
 head(kerinci)
@@ -77,7 +78,7 @@ tiger <- kerinci[kerinci$Sps=="tiger",]
 timetig <- tiger$timeRad
 densityPlot(timetig, rug=TRUE)
 
-# selecting the second species
+# exercise: select only the data on macaque individuals
 maca <- kerinci[kerinci$Sps=="macaque",]
 
 # selecting the time for the tiger
@@ -96,28 +97,3 @@ summary(kerinci$Sps)
 tap <- timeRad[kerinci$Sps == 'tapir']
 overlapPlot(mac, tap)
 legend('topright', c("Macaques", "Tapirs"), lty=c(1,2), col=c("black","blue"), bty='n')       
-
-
-#******** 2 ******
-# relation among species in time
-
-library(overlap)
-
-data(kerinci)
-summary(kerinci)
-
-kerinci$timeRad <- kerinci$Time * 2 * pi
-
-tiger <- kerinci[kerinci$Sps=="tiger",]
-
-timetig <- tiger$timeRad
-densityPlot(timetig, rug=TRUE)
-
-# exercise: select only the data on macaque individuals
-macaque <- kerinci[kerinci$Sps=="macaque",]
-head(macaque)
-
-timemac <- macaque$timeRad
-densityPlot(timemac, rug=TRUE)
-
-overlapPlot(timetig, timemac)
