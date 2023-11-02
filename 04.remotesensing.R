@@ -3,7 +3,6 @@
 library(devtools)
 # install the imageRy package from GitHub
 devtools::install_github("ducciorocchini/imageRy")
-
 library(imageRy)
 library(terra)
 
@@ -20,7 +19,6 @@ plot(iron, diameter, pch=19, cex=2, col="red")
 
 # now we will use a package
 im.list()
-
 # importing data
 b2 <- im.import("sentinel.dolomites.b2.tif") # b2 is the blue wavelength
 b2 # blue band
@@ -49,7 +47,16 @@ cln <- colorRampPalette(c("brown", "orange", "yellow")) (100) # 100 is the amoun
 plot(b8, col=cln)
 dev.off() 
 
+# To compose image in colors Rb4 Gb3 Bb2 and b8 each band to a RGB. We see all bands together
+#stack
+#band2 blue element1 stacksent[[1]]
+#b3 green 2
+#b4 red 3
+#b8 nir 4
+im.plotRGB(stacksent, r=3, g=2, b=1)
 
+
+---
 # Sentinel-2 image
 sentdo <- c(b2, b3, b4, b8)
 clall <- colorRampPalette(c("black", "dark gray", "gray")) (100) # 100 is the amount of colours in the gradient
