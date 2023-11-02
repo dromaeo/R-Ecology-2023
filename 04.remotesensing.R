@@ -40,7 +40,7 @@ clr <- colorRampPalette(c("dark red", "red", "pink")) (100) # 100 is the amount 
 plot(b4, col=clr)
 cln <- colorRampPalette(c("brown", "orange", "yellow")) (100) # 100 is the amount of colours in the gradient
 plot(b8, col=cln)
-dev.off()
+dev.off() #cleans graph
 
 cl=colorRampPalette(c("black","dark grey","light grey")) (100)
 plot(b2, col=cl)
@@ -52,13 +52,6 @@ dev.off()
 sentdo <- c(b2, b3, b4, b8)
 clall <- colorRampPalette(c("black", "dark gray", "gray")) (100) # 100 is the amount of colours in the gradient
 plot(sentdo, col=clall)
-
-# how to consider only one element
-plot(sentdo[[4]])
-
-# dev.off() cleaning graphs
-dev.off()
-
 # how to consider only one element
 plot(sentdo[[4]])
 
