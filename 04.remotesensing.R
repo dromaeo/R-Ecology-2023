@@ -47,6 +47,7 @@ plot(b2, col=cl)
 stacksent<-c(b2, b3, b4, b8)
 plot(stacksent, col=cl)
 dev.off()
+#We do want to store as points
 
 # Sentinel-2 image
 sentdo <- c(b2, b3, b4, b8)
