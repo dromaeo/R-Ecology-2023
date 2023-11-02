@@ -4,14 +4,12 @@
 #***********
 # MULTIVAR
 #***********
-
 library(vegan)
 
 data(dune)
 ord <- decorana(dune)
 ord
-
-# Call:
+# Call results:
 # decorana(veg = dune) 
 
 # Detrended correspondence analysis with 26 segments.
@@ -37,19 +35,15 @@ pldc1 = ldc1 * 100 / total
 pldc2 = ldc2 * 100 / total
 pldc3 = ldc3 * 100 / total
 pldc4 = ldc4 * 100 / total
-
 pldc1
 pldc2
-
 pldc1 + pldc2
 
 plot(ord)
 
-
 #*************
 # OVERLAP
 #***********
-
 # camera traps data
 # data from Kerinci-Seblat National Park in Sumatra, Indonesia (Ridout and Linkie, 2009)
 # Ridout MS, Linkie M (2009). Estimating overlap of daily activity patterns from camera trap data. 
@@ -58,7 +52,6 @@ plot(ord)
 install.packages("overlap")
 library(overlap)
 # https://cran.r-project.org/web/packages/overlap/vignettes/overlap.pdf
-
 
 # relation among species in time
 # data
@@ -73,19 +66,16 @@ kerinci$timeRad <- kerinci$Time * 2 * pi
 
 # selecting the first species
 tiger <- kerinci[kerinci$Sps=="tiger",]
-
 # selecting the time for the tiger
 timetig <- tiger$timeRad
 densityPlot(timetig, rug=TRUE)
 
-# exercise: select only the data on macaque individuals
+# macaque individuals
 maca <- kerinci[kerinci$Sps=="macaque",]
-
-# selecting the time for the tiger
 timemaca <- maca$timeRad
 densityPlot(timemaca, rug=TRUE)
 
-# overlap!
+# overlap
 overlapPlot(timetig, timemaca)
 legend('topright', c("Tigers", "Macaques"), lty=c(1,2), col=c("black","blue"), bty='n')       
 
