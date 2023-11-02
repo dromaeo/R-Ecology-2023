@@ -31,6 +31,13 @@ b4 # red band
 b8 <- im.import("sentinel.dolomites.b8.tif")
 b8 # NIR band infrared
 
+cl=colorRampPalette(c("black","dark grey","light grey")) (100)
+plot(b2, col=cl)
+stacksent<-c(b2, b3, b4, b8)
+plot(stacksent, col=cl)
+dev.off() #cleans graph
+#We do want to store as points
+
 par(mfrow=c(2,2))
 cl <- colorRampPalette(c("dark blue", "blue", "light blue")) (100) # 100 is the amount of colours in the gradient
 plot(b2, col=cl)
@@ -40,14 +47,8 @@ clr <- colorRampPalette(c("dark red", "red", "pink")) (100) # 100 is the amount 
 plot(b4, col=clr)
 cln <- colorRampPalette(c("brown", "orange", "yellow")) (100) # 100 is the amount of colours in the gradient
 plot(b8, col=cln)
-dev.off() #cleans graph
+dev.off() 
 
-cl=colorRampPalette(c("black","dark grey","light grey")) (100)
-plot(b2, col=cl)
-stacksent<-c(b2, b3, b4, b8)
-plot(stacksent, col=cl)
-dev.off()
-#We do want to store as points
 
 # Sentinel-2 image
 sentdo <- c(b2, b3, b4, b8)
