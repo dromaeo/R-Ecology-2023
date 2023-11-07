@@ -9,19 +9,16 @@ library(viridis)
 im.list()
 m1992 <- im.import("matogrosso_l5_1992219_lrg.jpg")
 # band 1: NIR, 2: red, 3: green
-im.plotRGB.user(m1992, r=1, g=2, b=3)
-im.plotRGB.user(m1992, 1, 2, 3) #red overlayed on NIR
-im.plotRGB.user(m1992, 2, 1, 3) #green on top of NIR. dense vegetation
-im.plotRGB.user(m1992, 2, 3, 1)
+im.plotRGB(m1992, r=1, g=2, b=3)
+im.plotRGB(m1992, 1, 2, 3) #red overlayed on NIR
+im.plotRGB(m1992, 2, 1, 3) #green on top of NIR. dense vegetation
+im.plotRGB(m1992, 2, 3, 1)
 
-# import the 2006 image
+# import the 2006 image - how it changes
 m2006 <- im.import("matogrosso_ast_2006209_lrg")
+im.plotRGB.user(m2006, 2, 3, 1) #plot the 2006 image with NIR in the Blue component of the RGB space
 
-# Exercise: plot the 2006 image with NIR in the Green component of the RGB space
 im.plotRGB.user(m2006, 2, 1, 3)
-
-# Exercise: plot the 2006 image with NIR in the Blue component of the RGB space
-im.plotRGB.user(m2006, 2, 3, 1)
 
 # Exercise: plot the two images one beside the other
 par(mfrow=c(1,2))
