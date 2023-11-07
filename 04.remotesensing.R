@@ -55,6 +55,8 @@ dev.off()
 #b8 nir 4
 im.plotRGB(stacksent, r=3, g=2, b=1)
 
+#EXAM:
+#GIT comments, project, 10min presentation questions on what's used. 
 
 ---
 # Sentinel-2 image
