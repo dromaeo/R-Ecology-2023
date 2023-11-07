@@ -54,9 +54,16 @@ dev.off()
 #b4 red 3
 #b8 nir 4
 im.plotRGB(stacksent, r=3, g=2, b=1)
+im.plotRGB(stacksent, r=4, g=3, b=2)
+im.plotRGB(stacksent, r=3, g=4, b=2)
+im.plotRGB(stacksent, r=3, g=2, b=4)
 
-#EXAM:
-#GIT comments, project, 10min presentation questions on what's used. 
+  #EXAM:
+  #GIT comments, project, 10min presentation questions on what's used. 
+
+#We can compare functions in pairs (correlation)
+# ?pairs
+pairs(stacksent)
 
 ---
 # Sentinel-2 image
