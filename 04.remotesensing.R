@@ -53,7 +53,7 @@ dev.off()
 #b3 green 2
 #b4 red 3
 #b8 nir 4
-im.plotRGB(stacksent, r=3, g=2, b=1)
+im.plotRGB(stacksent, r=3, g=2, b=1) # it plots the first three layers in the RGB components
 im.plotRGB(stacksent, r=4, g=3, b=2)
 im.plotRGB(stacksent, r=3, g=4, b=2)
 im.plotRGB(stacksent, r=3, g=2, b=4)
@@ -61,31 +61,9 @@ im.plotRGB(stacksent, r=3, g=2, b=4)
   #EXAM:
   #GIT comments, project, 10min presentation questions on what's used. 
 
-#We can compare functions in pairs (correlation)
+#We can compare functions in pairs (Pear.'s correlation)
 # ?pairs
 pairs(stacksent)
-
----
-# Sentinel-2 image
-sentdo <- c(b2, b3, b4, b8)
-clall <- colorRampPalette(c("black", "dark gray", "gray")) (100) # 100 is the amount of colours in the gradient
-plot(sentdo, col=clall)
-# how to consider only one element
-plot(sentdo[[4]])
-
-# RGB space
-im.plotRGB.user(sentdo, 3, 2, 1)  # it plots the first three layers in the RGB components
-
-# use of NIR
-im.plotRGB.user(sentdo, 4, 3, 2)  # it plots the first three layers in the RGB components
-
-# multiframe with the natural colours image and the false colour image
-par(mfrow=c(1,2))
-im.plotRGB.user(sentdo, 3, 2, 1)  # it plots the first three layers in the RGB components
-im.plotRGB.user(sentdo, 4, 3, 2)  # it plots the first three layers in the RGB components
-
-im.plotRGB.user(sentdo, 3, 4, 2)  # it plots the first three layers in the RGB components
-im.plotRGB.user(sentdo, 3, 2, 4)  # it plots the first three layers in the RGB components
-
-# what is the band carrying the highest infomration
-pairs(sentdo)
+#All bands are correlated with each other
+# reflectance int not float
+# histograms: each value of reflectance
