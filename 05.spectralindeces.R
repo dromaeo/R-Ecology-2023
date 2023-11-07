@@ -8,12 +8,10 @@ library(ggplot2)
 library(viridis)
 im.list()
 m1992 <- im.import("matogrosso_l5_1992219_lrg.jpg")
-
-# layer 1: NIR
-# layer 2: red
-# layer 3: green
-im.plotRGB.user(m1992, 1, 2, 3)
-im.plotRGB.user(m1992, 2, 1, 3)
+# band 1: NIR, 2: red, 3: green
+im.plotRGB.user(m1992, r=1, g=2, b=3)
+im.plotRGB.user(m1992, 1, 2, 3) #red overlayed on NIR
+im.plotRGB.user(m1992, 2, 1, 3) #green on top of NIR. dense vegetation
 im.plotRGB.user(m1992, 2, 3, 1)
 
 # import the 2006 image
