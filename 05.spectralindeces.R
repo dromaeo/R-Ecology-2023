@@ -18,14 +18,11 @@ im.plotRGB(m1992, 2, 3, 1) #nir on top of the blue. soil is yellow.
 m2006 <- im.import("matogrosso_ast_2006209_lrg")
 im.plotRGB.user(m2006, 2, 3, 1) #plot the 2006 image with NIR in the Blue component of the RGB space
 
-im.plotRGB.user(m2006, 2, 1, 3)
+par(mfrow=c(1,2)) #concatenate, multiframe row
+im.plotRGB.user(m1992, 2, 3, 1)
+im.plotRGB.user(m2006, 2, 3, 1)
 
-# Exercise: plot the two images one beside the other
-par(mfrow=c(1,2))
-im.plotRGB.user(m1992, 1, 2, 3)
-im.plotRGB.user(m2006, 1, 2, 3)
-
-# Calculating the DVI
+# Vegetation indexes: Calculating the DVI
 # dvi1992
 dvi1992 = m1992[[1]] - m1992[[2]]
 dvi1992
