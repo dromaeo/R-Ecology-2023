@@ -23,11 +23,14 @@ im.plotRGB.user(m1992, 2, 3, 1)
 im.plotRGB.user(m2006, 2, 3, 1)
 
 # Vegetation indexes: Calculating the DVI
-# dvi1992
+#light reflected vs incident
+m2006[1]  #quite a range. rescale w bits
+#2 bit 4 states info, 3 has 8 (2^3)
+#DVI= NIR-RED aka 1-2 , for each pixel
 dvi1992 = m1992[[1]] - m1992[[2]]
-dvi1992
-
-cl <- colorRampPalette(c("darkblue", "yellow", "red", "black"))(100) # specifying a color scheme
+plot(dvi1992)
+#amount of healthy in 92, all green healthy, rest under 0 is soil or suffering
+cl <- colorRampPalette(c("darkblue", "yellow", "red", "black"))(100)
 plot(dvi1992, col=cl)
 
 # dvi2006
